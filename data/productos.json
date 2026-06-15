@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "nombre": "Auriculares Bluetooth Pro",
+    "precio": 89.99,
+    "descripcion": "Auriculares inalámbricos con cancelación de ruido activa, 30 horas de batería y sonido de alta fidelidad. Compatibles con todos los dispositivos Bluetooth 5.3.",
+    "categoria": "Electrónica",
+    "stock": 25,
+    "imagen": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400"
+  },
+  {
+    "id": 2,
+    "nombre": "Teclado Mecánico RGB",
+    "precio": 129.99,
+    "descripcion": "Teclado mecánico gaming con switches Cherry MX, retroiluminación RGB personalizable y reposamuñecas magnético. Diseño compacto 75%.",
+    "categoria": "Informática",
+    "stock": 15,
+    "imagen": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400"
+  },
+  {
+    "id": 3,
+    "nombre": "Monitor 27\" 4K UHD",
+    "precio": 449.99,
+    "descripcion": "Monitor IPS 27 pulgadas con resolución 4K, HDR10, 144Hz, 1ms. Ideal para diseño gráfico y gaming competitivo.",
+    "categoria": "Informática",
+    "stock": 8,
+    "imagen": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400"
+  },
+  {
+    "id": 4,
+    "nombre": "Smartwatch Deportivo",
+    "precio": 199.99,
+    "descripcion": "Reloj inteligente con GPS, monitor cardíaco, oxímetro, 80+ modos deportivos y 14 días de batería. Resistente al agua 5ATM.",
+    "categoria": "Electrónica",
+    "stock": 30,
+    "imagen": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400"
+  },
+  {
+    "id": 5,
+    "nombre": "Cámara Web 4K",
+    "precio": 79.99,
+    "descripcion": "Cámara web con resolución 4K, micrófono estéreo integrado, corrección automática de luz y enfoque automático. Plug & play USB-C.",
+    "categoria": "Electrónica",
+    "stock": 20,
+    "imagen": "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400"
+  },
+  {
+    "id": 6,
+    "nombre": "Silla Gaming Ergonómica",
+    "precio": 349.99,
+    "descripcion": "Silla ergonómica ajustable con soporte lumbar, reposabrazos 4D, inclinación 180° y materiales transpirables. Peso máximo: 150kg.",
+    "categoria": "Muebles",
+    "stock": 10,
+    "imagen": "https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=400"
+  },
+  {
+    "id": 7,
+    "nombre": "Altavoz Portátil Resistente",
+    "precio": 59.99,
+    "descripcion": "Altavoz Bluetooth portátil, resistencia IP67 al agua y polvo, 20 horas de batería y sonido 360°. Ideal para exteriores.",
+    "categoria": "Electrónica",
+    "stock": 40,
+    "imagen": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400"
+  },
+  {
+    "id": 8,
+    "nombre": "Tablet Gráfica Profesional",
+    "precio": 299.99,
+    "descripcion": "Tableta gráfica inalámbrica con lápiz sin batería, 8192 niveles de presión, área de trabajo A4 y 8 teclas programables.",
+    "categoria": "Informática",
+    "stock": 12,
+    "imagen": "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400"
+  }
+]

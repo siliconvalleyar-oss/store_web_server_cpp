@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Tienda Electrónica</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ─── NAVBAR ─── -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" onclick="mostrarSeccion('catalogo')">
+                <span class="logo-icon">🛒</span>
+                <span class="logo-text">Tech<span class="logo-highlight">Store</span></span>
+            </a>
+            <nav class="nav-links">
+                <a href="#" onclick="mostrarSeccion('catalogo')" class="nav-link active" data-seccion="catalogo">
+                    🏪 Productos
+                </a>
+                <a href="#" onclick="mostrarSeccion('carrito')" class="nav-link" data-seccion="carrito">
+                    🛍️ Carrito <span class="cart-badge" id="cart-badge">0</span>
+                </a>
+                <a href="#" onclick="mostrarSeccion('login')" class="nav-link" data-seccion="login" id="nav-login">
+                    🔑 Iniciar Sesión
+                </a>
+                <a href="#" onclick="cerrarSesion()" class="nav-link" data-seccion="perfil" id="nav-perfil" style="display:none;">
+                    👤 <span id="nav-usuario">Usuario</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- ─── SECCIÓN: CATÁLOGO ─── -->
+        <section id="seccion-catalogo" class="seccion activa">
+            <div class="catalogo-header">
+                <h1 class="catalogo-titulo">🏪 Catálogo de Productos</h1>
+                <p class="catalogo-subtitulo">Los mejores productos en tecnología y electrónica</p>
+                <div class="catalogo-filtros">
+                    <button class="filtro-btn activo" data-categoria="todas" onclick="filtrarPorCategoria('todas')">Todas</button>
+                    <button class="filtro-btn" data-categoria="Electrónica" onclick="filtrarPorCategoria('Electrónica')">Electrónica</button>
+                    <button class="filtro-btn" data-categoria="Informática" onclick="filtrarPorCategoria('Informática')">Informática</button>
+                    <button class="filtro-btn" data-categoria="Muebles" onclick="filtrarPorCategoria('Muebles')">Muebles</button>
+                </div>
+            </div>
+            <div class="productos-grid" id="productos-grid">
+                <div class="loader">Cargando productos...</div>
+            </div>
+        </section>
+
+        <!-- ─── SECCIÓN: CARRITO ─── -->
+        <section id="seccion-carrito" class="seccion">
+            <h1 class="seccion-titulo">🛍️ Tu Carrito</h1>
+            <div id="carrito-contenido">
+                <div class="carrito-vacio">
+                    <div class="vacio-icono">🛒</div>
+                    <h2>Tu carrito está vacío</h2>
+                    <p>Explora nuestro catálogo y agrega productos</p>
+                    <a href="#" onclick="mostrarSeccion('catalogo')" class="btn btn-primary">Ver Productos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── SECCIÓN: CHECKOUT ─── -->
+        <section id="seccion-checkout" class="seccion">
+            <h1 class="seccion-titulo">📦 Finalizar Compra</h1>
+            <div class="checkout-container">
+                <form id="checkout-form" class="checkout-form">
+                    <div class="form-grupo">
+                        <label for="checkout-nombre">Nombre completo</label>
+                        <input type="text" id="checkout-nombre" placeholder="Juan Pérez" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="checkout-direccion">Dirección de envío</label>
+                        <input type="text" id="checkout-direccion" placeholder="Calle Principal 123, Ciudad" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="checkout-tarjeta">Número de tarjeta</label>
+                        <input type="text" id="checkout-tarjeta" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-grupo">
+                            <label for="checkout-expiracion">Vencimiento</label>
+                            <input type="text" id="checkout-expiracion" placeholder="MM/AA" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="checkout-cvv">CVV</label>
+                            <input type="text" id="checkout-cvv" placeholder="123" maxlength="4" required>
+                        </div>
+                    </div>
+                    <div id="checkout-resumen" class="checkout-resumen"></div>
+                    <button type="submit" class="btn btn-success btn-lg">✅ Pagar y Confirmar</button>
+                </form>
+                <div id="checkout-exito" class="checkout-exito" style="display:none;">
+                    <div class="exito-icono">🎉</div>
+                    <h2>¡Compra realizada con éxito!</h2>
+                    <p id="checkout-pedido"></p>
+                    <p id="checkout-total"></p>
+                    <a href="#" onclick="mostrarSeccion('catalogo')" class="btn btn-primary">Seguir Comprando</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── SECCIÓN: LOGIN ─── -->
+        <section id="seccion-login" class="seccion">
+            <div class="login-container">
+                <div class="login-card">
+                    <div class="login-header">
+                        <div class="login-icon">🔐</div>
+                        <h2>Iniciar Sesión</h2>
+                        <p>Ingresa para comprar en TechStore</p>
+                    </div>
+                    <form id="login-form" class="login-form">
+                        <div class="form-grupo">
+                            <label for="login-usuario">Usuario</label>
+                            <input type="text" id="login-usuario" placeholder="admin o cliente" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="login-password">Contraseña</label>
+                            <input type="password" id="login-password" placeholder="admin o cliente" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">Iniciar Sesión</button>
+                    </form>
+                    <div class="login-cred">
+                        <small>Demo: admin/admin · cliente/cliente</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ─── TOAST NOTIFICATIONS ─── -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

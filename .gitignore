@@ -1,0 +1,22 @@
+# Build outputs
+bin/
+obj/
+*.o
+*.exe
+*.out
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log

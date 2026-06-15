@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - TechStore</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="main-content">
+        <div class="login-container">
+            <div class="login-card">
+                <div class="login-header">
+                    <div class="login-icon">🔐</div>
+                    <h2>Iniciar Sesión</h2>
+                    <p>Ingresa para comprar en TechStore</p>
+                </div>
+                <form id="login-form" class="login-form">
+                    <div class="form-grupo">
+                        <label for="login-usuario">Usuario</label>
+                        <input type="text" id="login-usuario" placeholder="admin o cliente" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="login-password">Contraseña</label>
+                        <input type="password" id="login-password" placeholder="admin o cliente" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">Iniciar Sesión</button>
+                </form>
+                <div class="login-cred">
+                    <small>Demo: admin/admin · cliente/cliente</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>

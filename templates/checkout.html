@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - TechStore</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="main-content">
+        <h1 class="seccion-titulo">📦 Finalizar Compra</h1>
+        <div class="checkout-container">
+            <form id="checkout-form" class="checkout-form">
+                <div class="form-grupo">
+                    <label for="checkout-nombre">Nombre completo</label>
+                    <input type="text" id="checkout-nombre" placeholder="Juan Pérez" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="checkout-direccion">Dirección de envío</label>
+                    <input type="text" id="checkout-direccion" placeholder="Calle Principal 123, Ciudad" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="checkout-tarjeta">Número de tarjeta</label>
+                    <input type="text" id="checkout-tarjeta" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-grupo">
+                        <label for="checkout-expiracion">Vencimiento</label>
+                        <input type="text" id="checkout-expiracion" placeholder="MM/AA" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="checkout-cvv">CVV</label>
+                        <input type="text" id="checkout-cvv" placeholder="123" maxlength="4" required>
+                    </div>
+                </div>
+                <div id="checkout-resumen" class="checkout-resumen"></div>
+                <button type="submit" class="btn btn-success btn-lg">✅ Pagar y Confirmar</button>
+            </form>
+            <div id="checkout-exito" class="checkout-exito" style="display:none;">
+                <div class="exito-icono">🎉</div>
+                <h2>¡Compra realizada con éxito!</h2>
+                <p id="checkout-pedido"></p>
+                <p id="checkout-total"></p>
+                <a href="/" class="btn btn-primary">Seguir Comprando</a>
+            </div>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>

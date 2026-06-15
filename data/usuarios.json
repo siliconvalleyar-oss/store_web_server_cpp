@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "usuario": "admin",
+    "password": "admin",
+    "nombre": "Administrador",
+    "direccion": "Av. Principal 123, Ciudad"
+  },
+  {
+    "id": 2,
+    "usuario": "cliente",
+    "password": "cliente",
+    "nombre": "Cliente de Prueba",
+    "direccion": "Calle Secundaria 456, Ciudad"
+  }
+]

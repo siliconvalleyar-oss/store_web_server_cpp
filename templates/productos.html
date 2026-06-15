@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - TechStore</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="main-content">
+        <div class="catalogo-header">
+            <h1 class="catalogo-titulo">🏪 Catálogo de Productos</h1>
+            <p class="catalogo-subtitulo">Los mejores productos en tecnología y electrónica</p>
+            <div class="catalogo-filtros">
+                <button class="filtro-btn activo" onclick="cargarProductos()">🔄 Recargar</button>
+            </div>
+        </div>
+        <div class="productos-grid" id="productos-grid">
+            <div class="loader">Cargando productos...</div>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>
